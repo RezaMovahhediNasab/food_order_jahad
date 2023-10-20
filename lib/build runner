@@ -1,0 +1,6 @@
+flutter pub run build_runner build
+
+
+
+
+https://github.com/fionicholas/Movie-Flutter/blob/master/lib/data/movies/movie_repository.dart

@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "d952fa6f-9bc7-47fb-ac06-3ae00ac25fa9",
+		"name": "jahad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9064846"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "root",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"jahad@gmail.com\",\r\n  \"password\": \"123456j\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apinaynava.metadatads.com/api/tokens",
+					"protocol": "https",
+					"host": [
+						"apinaynava",
+						"metadatads",
+						"com"
+					],
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "root",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jahad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456j",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://apinaynava.metadatads.com/api/tokens",
+					"protocol": "https",
+					"host": [
+						"apinaynava",
+						"metadatads",
+						"com"
+					],
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
