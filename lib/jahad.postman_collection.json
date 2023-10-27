@@ -43,33 +43,29 @@
 			"response": []
 		},
 		{
-			"name": "products",
+			"name": "https://apinaynava.metadatads.com/api/v1/products/all",
 			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "tenant",
-						"value": "root",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
+				"auth": {
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "email",
-							"value": "jahad@gmail.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "123456j",
-							"type": "text"
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImQ4ZjI4ZmI1LTBlNDUtNGZiNi1hNTg0LWZkODhhNDZiYTkyNyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImphaGFkQGdtYWlsLmNvbSIsImZ1bGxOYW1lIjoi2KzZh9in2K_Yr9in2YbYtNqv2KfZh9uMIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6ImphaGFkQGdtYWlsLmNvbSIsImlwQWRkcmVzcyI6IjE3OC4yNTIuMTcwLjEiLCJ0ZW5hbnQiOiJyb290Iiwicm9sZXMiOiJbXCJiYXNpY1wiLFwi2qnYp9ix2KjYsVwiXSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL21vYmlsZXBob25lIjoiMDkwMTExMTExMTEiLCJleHAiOjE2OTk2OTkyNTR9.jnqy9FHmDMrrvnJwcD5mnzuvKx7tXVJT-qy8ZtCEDWs",
+							"type": "string"
 						}
 					]
 				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
 				"url": {
-					"raw": "https://apinaynava.metadatads.com/api/tokens",
+					"raw": "https://apinaynava.metadatads.com/api/v1/products/all",
 					"protocol": "https",
 					"host": [
 						"apinaynava",
@@ -78,7 +74,9 @@
 					],
 					"path": [
 						"api",
-						"tokens"
+						"v1",
+						"products",
+						"all"
 					]
 				}
 			},
