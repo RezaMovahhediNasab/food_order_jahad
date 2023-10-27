@@ -1,10 +1,6 @@
-//
-// import 'package:class_flutter/data/models/product_model/product_model.dart';
-//
-// abstract class ProductDataSource {
-//
-//   Future<ProductModel> getSingleProduct(String id);
-//
-//
-//
-// }
+import 'package:food_order_jahad/data/models/base_response.dart';
+import 'package:food_order_jahad/data/models/product_model/product_model.dart';
+
+abstract class ProductDataSource {
+  Future<BaseResponse<List<ProductModel>>> getAllProduct(String token);
+}

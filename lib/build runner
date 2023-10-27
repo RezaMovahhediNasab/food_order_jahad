@@ -1,6 +1,13 @@
 flutter pub run build_runner build
+flutter pub run build_runner build --delete-conflicting-outputs
 
 
 
 
 https://github.com/fionicholas/Movie-Flutter/blob/master/lib/data/movies/movie_repository.dart
+
+
+//state mixin
+//header set token
+//error handling
+//categories

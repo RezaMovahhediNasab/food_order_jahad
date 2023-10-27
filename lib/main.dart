@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:food_order_jahad/core/local_storage.dart';
+import 'package:food_order_jahad/presentation/pages/product/product_page.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 import 'presentation/pages/login/login_page.dart';
 import 'presentation/styles/theme.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initServices();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final LocalStorage _localStorage = Get.find<LocalStorage>();
+
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -18,8 +26,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: themeData(),
-      home: LoginPage(),
+      home: _localStorage.token.isEmpty ? LoginPage() : const ProductPage(),
     );
   }
 }
 
+Future initServices() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init();
+
+  Get.put(LocalStorage());
+}

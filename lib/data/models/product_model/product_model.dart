@@ -1,47 +1,46 @@
-// import 'package:json_annotation/json_annotation.dart';
-//
-// part 'product_model.g.dart';
-//
-// @JsonSerializable()
-// class ProductModel {
-//   int? id;
-//   String? title;
-//   int? price;
-//   String? description;
-//   List<String>? images;
-//   String? creationAt;
-//   String? updatedAt;
-//   CategoryModel? category;
-//
-//   ProductModel(
-//       {this.id,
-//       this.title,
-//       this.price,
-//       this.description,
-//       this.images,
-//       this.creationAt,
-//       this.updatedAt,
-//       this.category});
-//
-//   factory ProductModel.fromJson(Map<String, dynamic> json) =>
-//       _$ProductModelFromJson(json);
-//
-//   Map<String, dynamic> toJson() => _$ProductModelToJson(this);
-// }
-//
-// @JsonSerializable()
-// class CategoryModel {
-//   int? id;
-//   String? name;
-//   String? image;
-//   String? creationAt;
-//   String? updatedAt;
-//
-//   CategoryModel(
-//       {this.id, this.name, this.image, this.creationAt, this.updatedAt});
-//
-//   factory CategoryModel.fromJson(Map<String, dynamic> json) =>
-//       _$CategoryModelFromJson(json);
-//
-//   Map<String, dynamic> toJson() => _$CategoryModelToJson(this);
-// }
+import 'package:json_annotation/json_annotation.dart';
+
+part 'product_model.g.dart';
+
+@JsonSerializable()
+class ProductModel {
+  String? id;
+  String? name;
+  String? categories;
+  bool? isMaster;
+  String? masterImage;
+  String? brandName;
+  int? inStock;
+  bool? isActive;
+  int? masterPrice;
+  String? locale;
+
+  String? country;
+
+  String? code;
+
+  String? jsonExt;
+
+  ProductModel({
+    required this.id,
+    required this.name,
+    required this.categories,
+    required this.isMaster,
+    required this.masterImage,
+    required this.brandName,
+    required this.inStock,
+    required this.isActive,
+    required this.masterPrice,
+    required this.locale,
+    required this.country,
+    required this.code,
+    required this.jsonExt,
+  });
+
+
+
+  factory ProductModel.fromJson(Map<String, dynamic> json) =>
+      _$ProductModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProductModelToJson(this);
+}
