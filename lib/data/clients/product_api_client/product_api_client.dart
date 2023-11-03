@@ -13,4 +13,9 @@ abstract class ProductApiClient {
   Future<BaseResponse<List<ProductModel>>> getAllProductApi(
     @Header('Authorization') String token,
   );
+
+  @GET('/products/client/{id}')
+  Future<BaseResponse<ProductModel>> getSingleProduct(
+    @Path('id') String id
+  );
 }

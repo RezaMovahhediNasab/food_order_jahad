@@ -45,8 +45,4 @@ Future initServices() async {
   await GetStorage.init();
 
   Get.put(LocalStorage());
-
-
-
-
 }

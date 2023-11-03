@@ -15,7 +15,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       brandName: json['brandName'] as String?,
       inStock: json['inStock'] as int?,
       isActive: json['isActive'] as bool?,
-      masterPrice: json['masterPrice'] as double?,
+      masterPrice: (json['masterPrice'] as num?)?.toDouble(),
       locale: json['locale'] as String?,
       country: json['country'] as String?,
       code: json['code'] as String?,

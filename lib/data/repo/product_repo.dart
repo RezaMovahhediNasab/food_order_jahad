@@ -23,4 +23,11 @@ class ProductRepository extends ProductDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse<ProductModel>> getSingleProduct(String id) async{
+
+
+    return await _apiClient.getSingleProduct(id);
+  }
 }

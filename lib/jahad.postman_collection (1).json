@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d952fa6f-9bc7-47fb-ac06-3ae00ac25fa9",
+		"_postman_id": "ffbc7634-ed06-4af3-8547-df7b1fb4a905",
 		"name": "jahad",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9064846"
@@ -43,7 +43,69 @@
 			"response": []
 		},
 		{
-			"name": "https://apinaynava.metadatads.com/api/v1/products/all",
+			"name": "single product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImQ4ZjI4ZmI1LTBlNDUtNGZiNi1hNTg0LWZkODhhNDZiYTkyNyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImphaGFkQGdtYWlsLmNvbSIsImZ1bGxOYW1lIjoi2KzZh9in2K_Yr9in2YbYtNqv2KfZh9uMIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6ImphaGFkQGdtYWlsLmNvbSIsImlwQWRkcmVzcyI6IjE3OC4yNTIuMTcwLjEiLCJ0ZW5hbnQiOiJyb290Iiwicm9sZXMiOiJbXCJiYXNpY1wiLFwi2qnYp9ix2KjYsVwiXSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL21vYmlsZXBob25lIjoiMDkwMTExMTExMTEiLCJleHAiOjE2OTk2OTkyNTR9.jnqy9FHmDMrrvnJwcD5mnzuvKx7tXVJT-qy8ZtCEDWs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://apinaynava.metadatads.com/api/v1/products/client/",
+					"protocol": "https",
+					"host": [
+						"apinaynava",
+						"metadatads",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"client",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "94860000-b419-c60d-d6d4-08db9416be05",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all product",
 			"request": {
 				"auth": {
 					"type": "bearer",
