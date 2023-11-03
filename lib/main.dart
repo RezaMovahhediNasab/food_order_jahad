@@ -1,4 +1,6 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:food_order_jahad/core/language/languages.dart';
 import 'package:food_order_jahad/core/local_storage.dart';
 import 'package:food_order_jahad/presentation/pages/product/product_page.dart';
 import 'package:get/get.dart';
@@ -24,6 +26,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+
+      /// get from localStorage
+      locale: Get.deviceLocale,
+
+      fallbackLocale: const Locale('fa', 'FA'),
+      translations: Languages(),
+
       title: 'Flutter Demo',
       theme: themeData(),
       home: _localStorage.token.isEmpty ? LoginPage() : const ProductPage(),
@@ -36,4 +45,8 @@ Future initServices() async {
   await GetStorage.init();
 
   Get.put(LocalStorage());
+
+
+
+
 }

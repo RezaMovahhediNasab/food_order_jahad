@@ -12,7 +12,7 @@ class ProductModel {
   String? brandName;
   int? inStock;
   bool? isActive;
-  int? masterPrice;
+  double? masterPrice;
   String? locale;
 
   String? country;

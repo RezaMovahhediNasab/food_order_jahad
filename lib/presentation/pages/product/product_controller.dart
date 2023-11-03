@@ -6,26 +6,31 @@ import 'package:get/get.dart';
 
 import '../../../data/models/base_response.dart';
 
-class ProductController extends GetxController {
+class ProductController extends GetxController
+    with StateMixin<List<ProductModel>> {
   ProductRepository productRepository = ProductRepository();
-  List<ProductModel> productList = [];
+
+  // List<ProductModel> productList = [];
   final LocalStorage _localStorage = Get.find<LocalStorage>();
-  RxBool isFetching = RxBool(false);
 
   Future getAllProduct() async {
     try {
       if (_localStorage.token.isNotEmpty) {
-        isFetching.value = true;
+        RxStatus.loading();
+
+        // isFetching.value = true;
         BaseResponse<List<ProductModel>> res =
             await productRepository.getAllProduct(_localStorage.token);
         if (res.succeeded! && res.data != null) {
-          productList = res.data!;
-          isFetching.value = false;
-          update();
+          // productList = res.data!;
+          // isFetching.value = false;
+          change(res.data, status: RxStatus.success());
         }
       }
     } catch (e) {
-      isFetching.value = false;
+      RxStatus.error(e.toString());
+
+      // isFetching.value = false;
 
       rethrow;
     }

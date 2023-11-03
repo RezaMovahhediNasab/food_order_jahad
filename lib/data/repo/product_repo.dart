@@ -18,7 +18,7 @@ class ProductRepository extends ProductDataSource {
   @override
   Future<BaseResponse<List<ProductModel>>> getAllProduct(String token) {
     try {
-      return _apiClient.getAllProductApi(token);
+      return _apiClient.getAllProductApi("Bearer $token");
     } catch (e) {
       rethrow;
     }

@@ -1,8 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:food_order_jahad/data/models/base_response.dart';
-import 'package:food_order_jahad/data/models/login_model.dart';
 import 'package:food_order_jahad/data/models/product_model/product_model.dart';
-import 'package:food_order_jahad/data/rqModel/login_rqm.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'product_api_client.g.dart';

@@ -19,15 +19,33 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Sign in", style: Get.textTheme.headlineMedium),
+                  Text("sign_in".tr, style: Get.textTheme.headlineMedium),
+                  ElevatedButton(
+                      style: const ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll(Colors.red)),
+                      onPressed: () {
+                        //TODO SAVE TO LOCALSTORAGE
+                        Get.updateLocale(const Locale('fa', 'FA'));
+                        //update
+                      },
+                      child: const Text('Fa')),
+                  ElevatedButton(
+                      style: const ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll(Colors.red)),
+                      onPressed: () {
+                        Get.updateLocale(const Locale('en', 'US'));
+                      },
+                      child: const Text('English')),
                   Padding(
                     padding: const EdgeInsets.only(top: 48),
                     child: TextFieldWidget(
                         textEditingController: controller.nameController,
-                        title: 'First Name',
+                        title: 'first_name'.tr,
                         hint: 'Enter your First name'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   TextFieldWidget(
@@ -38,13 +56,13 @@ class LoginPage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 48),
                     child: SizedBox(
                       width: double.infinity,
-                      child:Obx(() =>  ElevatedButton(
+                      child: Obx(() => ElevatedButton(
                           onPressed: () async {
                             await controller.loginRequest();
                           },
                           child: controller.isLoading.value
-                              ? CupertinoActivityIndicator()
-                              : Text('Get Start'))),
+                              ? const CupertinoActivityIndicator()
+                              : const Text('Get Start'))),
                     ),
                   )
                 ],

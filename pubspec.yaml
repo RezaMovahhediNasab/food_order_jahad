@@ -43,6 +43,7 @@ dependencies:
   json_annotation: ^4.8.1
 
   get:
+  dio: ^5.3.3
 
 
 
