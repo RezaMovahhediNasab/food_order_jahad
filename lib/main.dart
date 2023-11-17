@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'presentation/pages/login/login_page.dart';
+import 'presentation/pages/search/search_page.dart';
 import 'presentation/styles/theme.dart';
 
 void main() async {
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
 
       title: 'Flutter Demo',
       theme: themeData(),
-      home: _localStorage.token.isEmpty ? LoginPage() : const ProductPage(),
+      home: SearchPage() ,
     );
   }
 }

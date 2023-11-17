@@ -18,11 +18,11 @@ class ProductPage extends StatelessWidget {
             return <Widget>[
               SliverAppBar(
                 expandedHeight: 250,
-                leading: BackButton(color: Colors.white),
+                leading: const BackButton(color: Colors.white),
                 actions: [
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.favorite_border,
                         color: Colors.white,
                       ))
@@ -35,13 +35,13 @@ class ProductPage extends StatelessWidget {
                 ),
               ),
               SliverToBoxAdapter(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
+                        const Padding(
+                          padding: EdgeInsets.symmetric(
                               horizontal: 12, vertical: 12),
                           child: Text('Katsu cabinet'),
                         ),
@@ -54,7 +54,7 @@ class ProductPage extends StatelessWidget {
                               scrollDirection: Axis.horizontal,
                               children: categories
                                   .map((e) => Container(
-                                        padding: EdgeInsets.symmetric(
+                                        padding: const EdgeInsets.symmetric(
                                             horizontal: 12, vertical: 8),
                                         color: Colors.grey,
                                         child: Text(e),
@@ -71,7 +71,7 @@ class ProductPage extends StatelessWidget {
           body: controller.obx(
             (state) => ListView.builder(
               itemCount: state?.length,
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
               itemBuilder: (context, index) => Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
@@ -82,7 +82,7 @@ class ProductPage extends StatelessWidget {
                         image: state![index].masterImage!, index: index),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                      const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   title: Text(state?[index].name ?? ''),
                   trailing: Text("$index"),
                   subtitle: Text("${state?[index].masterPrice}" ?? ''),
