@@ -4,5 +4,6 @@ import 'package:food_order_jahad/data/models/product_model/product_model.dart';
 abstract class ProductDataSource {
   Future<BaseResponse<List<ProductModel>>> getAllProduct(String token);
 
+
   Future<BaseResponse<ProductModel>> getSingleProduct(String id);
 }

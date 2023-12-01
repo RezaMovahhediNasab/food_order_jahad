@@ -1,13 +1,10 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:food_order_jahad/core/language/languages.dart';
 import 'package:food_order_jahad/core/local_storage.dart';
-import 'package:food_order_jahad/presentation/pages/product/product_page.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import 'presentation/pages/login/login_page.dart';
-import 'presentation/pages/search/search_page.dart';
+import 'presentation/pages/product/platzi/platzi_product_page.dart';
 import 'presentation/styles/theme.dart';
 
 void main() async {
@@ -36,7 +33,7 @@ class MyApp extends StatelessWidget {
 
       title: 'Flutter Demo',
       theme: themeData(),
-      home: SearchPage() ,
+      home: PlatziProductPage() ,
     );
   }
 }
